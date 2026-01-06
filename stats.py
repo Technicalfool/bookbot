@@ -11,3 +11,5 @@ def char_stats(input_string):
         else:
             new_dict[new_char] = 1
     return new_dict
+
+def char_stats_sorted(input_dict):
