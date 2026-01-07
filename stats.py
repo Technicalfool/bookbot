@@ -19,6 +19,8 @@ def sort_on(items):
 
 def char_stats_sorted(input_dict):
     new_list = []
-    for key, value in input_dict:
-        new_list.append({key: value})
-        print(new_list[key])
+    for key in input_dict:
+        if key.isalpha():
+            new_list.append({"char": key, "num": input_dict[key]})
+    new_list.sort(reverse=True, key=sort_on)
+    return new_list
